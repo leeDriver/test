@@ -1,0 +1,66 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.1"
+    defaultConfig {
+        applicationId "com.example.lee.hellojenkins"
+        minSdkVersion 15
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false   // 是否启动混淆
+//            zipAlignEnable false //是否启动zipAlign
+//            shrinkResources false // 是否移除无用的resource
+//            signingConfig sigingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+//            applicationVariants.all{
+//                variant ->
+//                    if(variant.buildType.name.equals('release')){
+//                        variant.outputs.each{
+//                            output ->
+//                                def outputFile = output.outputFile
+//                                if(outputFile != null && outputFile.name.endsWith('.apk')){
+//                                    def fileName = "gradle.apk"
+//                                    output.outputFile = new File("/Users/aa/Downloads/APK",fileName);
+//                                }
+//                        }
+//                    }
+//            }
+//            applicationVariants.all { variant ->
+//                if (variant.buildType.name.equals('release')) {
+//                    variant.outputs.each { output -> def outputFile = output.outputFile
+//                        if (outputFile != null && outputFile.name.endsWith('.apk')) {
+//                            def fileName = "${releaseTime()}_com.andli.myproject_${defaultConfig.versionName}.apk"
+//                            output.outputFile = new File(outputFile.parent, fileName)
+//                        }
+//                    }
+//                }
+//            }
+//            def releaseTime() {
+//                return new Date().format("yyyyMMdd", TimeZone.getTimeZone("UTC"))
+//            }
+        }
+//        signingConfigs {//签名的配置
+//            release {
+//                storeFile file("android.keystore")
+//                storePassword "mrj1234"
+//                keyAlias "android.keystore"
+//                keyPassword "mrj1234"
+//            }
+//        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:25.1.0'
+    testCompile 'junit:junit:4.12'
+}
