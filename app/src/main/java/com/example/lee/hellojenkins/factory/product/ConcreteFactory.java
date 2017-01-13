@@ -1,15 +1,16 @@
 package com.example.lee.hellojenkins.factory.product;
 
-import com.example.lee.myapplication.factory.FactoryMethodPattern;
+
+import com.example.lee.hellojenkins.factory.FactoryMethodPattern;
 
 /**
  * Created by lee on 2017/1/8.
  */
 
-public class ConcreteFactory<T> implements FactoryMethodPattern<T> {
+public class ConcreteFactory<T> extends FactoryMethodPattern<T> {
 
     @Override
-    public T FactoryMethod() {
+    public T factoryMethod() {
         return null;
     }
 }

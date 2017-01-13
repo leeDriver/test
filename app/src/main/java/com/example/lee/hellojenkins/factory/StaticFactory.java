@@ -1,8 +1,9 @@
 package com.example.lee.hellojenkins.factory;
 
-import com.example.lee.myapplication.factory.product.ConcreteProduct;
-import com.example.lee.myapplication.factory.product.IProduct;
-import com.example.lee.myapplication.factory.product.OtherProduct;
+
+import com.example.lee.hellojenkins.factory.product.*;
+import com.example.lee.hellojenkins.factory.product.ConcreteProduct;
+import com.example.lee.hellojenkins.factory.product.OtherProduct;
 
 /**
  * Created by lee on 2017/1/8.
