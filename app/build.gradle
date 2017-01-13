@@ -14,9 +14,9 @@ android {
     buildTypes {
         release {
             minifyEnabled false   // 是否启动混淆
-//            zipAlignEnable false //是否启动zipAlign
-//            shrinkResources false // 是否移除无用的resource
-//            signingConfig sigingConfigs.release
+            zipAlignEnable false //是否启动zipAlign
+            shrinkResources false // 是否移除无用的resource
+            signingConfig sigingConfigs.release
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
 //            applicationVariants.all{
 //                variant ->
@@ -45,14 +45,14 @@ android {
 //                return new Date().format("yyyyMMdd", TimeZone.getTimeZone("UTC"))
 //            }
         }
-//        signingConfigs {//签名的配置
-//            release {
-//                storeFile file("android.keystore")
-//                storePassword "mrj1234"
-//                keyAlias "android.keystore"
-//                keyPassword "mrj1234"
-//            }
-//        }
+        signingConfigs {//签名的配置
+            release {
+                storeFile file("android.keystore")
+                storePassword "mrj1234"
+                keyAlias "android.keystore"
+                keyPassword "mrj1234"
+            }
+        }
     }
 }
 
